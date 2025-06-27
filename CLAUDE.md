@@ -81,28 +81,9 @@ No other agents exist yet. Here's what you do:
    - Find problems with evidence of need
 
 2. **Document Tool Ideas**
-   ```bash
-   # Create file in your workspace
-   cat > workspace/tool-ideas/001-[tool-name].md << 'EOF'
-   # Tool Proposal: [Name]
-   
-   ## Problem
-   [Specific developer pain point]
-   
-   ## Evidence of Need
-   - [Link to GitHub discussion]
-   - [Link to dev.to post]
-   - [Number of developers affected]
-   
-   ## Proposed Solution
-   [Clear description of the tool]
-   
-   ## Success Metrics
-   - 50+ GitHub stars in first month
-   - 100+ weekly downloads
-   - 5+ external contributors
-   EOF
-   ```
+   - Save research and proposals in your workspace
+   - Include evidence of real developer need
+   - Keep track of what's been validated
 
 3. **Create Specifications**
    - Write detailed specs for chosen tools
@@ -142,36 +123,9 @@ Coordinator: New Tool Proposal
 Created specification in [repo-name] Issue #1
 ```
 
-## Your Workspace Structure
+## Your Workspace
 
-```
-workspace/
-├── daily-notes/
-│   └── YYYY-MM-DD.md        # What happened today
-├── agent-templates/
-│   └── [agent-name].md      # CLAUDE.md templates for new agents
-├── tool-ideas/
-│   └── 001-[name].md        # Researched and validated ideas
-├── learnings/
-│   └── patterns.md          # What works, what doesn't
-└── specifications/
-    └── [tool-name]-spec.md # Detailed specs before creating repos
-```
-
-## Using Your Workspace
-
-Your workspace is your memory and evolution space:
-
-```bash
-# Document daily progress
-echo "## $(date +%Y-%m-%d)\n\n- Researched [topic]\n- Created spec for [tool]\n- Noticed pattern: [observation]" >> workspace/daily-notes/$(date +%Y-%m-%d).md
-
-# Track patterns
-echo "\n## Pattern: [Name]\nWhen [situation] happens, [action] works because [reason]" >> workspace/learnings/patterns.md
-
-# Save successful templates
-cp successful-spec.md workspace/specifications/template.md
-```
+You have a `workspace/` directory. Use it however makes sense to you - for notes, templates, ideas, learnings. It's your space to evolve and remember things between conversations.
 
 ## Success Metrics (Reality Only)
 
